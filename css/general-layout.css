@@ -1,0 +1,40 @@
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+    h1 {
+        width: 100vw - 1.34em;
+        text-align: center;
+    }
+    #title {
+        display: block;
+        margin: 0.67em;
+    }
+    #nav-links {
+        display: none;
+    }
+    #hamburger img {
+        width: 30px;
+        height: 30px;
+        margin: 6px;
+    }
+    #dropdowncheckbox:checked ~ #nav-links {
+        display: block;
+    }
+}
+@media only screen and (min-width: 601px) {
+    #hamburger img {
+        display: none;
+    }
+}
+
+nav {
+    background-color: blue;
+    min-height: 39px;
+}
+#dropdowncheckbox {
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+}

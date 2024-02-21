@@ -11,10 +11,14 @@
     <body>
         <header>
             <h1>    
-                Lord of the Rings: The Return of the King
+                Lord of the Rings: <span id="title">The Return of the King</span>
             </h1>
             <nav>
-                <ul>
+                <label id="hamburger" for="dropdowncheckbox">
+                    <img src="../img/hamburger_menu.png" alt="hamburger-menu dropdown-button for navigation">
+                </label>
+                <input type="checkbox" id="dropdowncheckbox">
+                <ul id="nav-links">
                     <li><a href="author.html">Author</a></li>
                     <li><a href="reception.html">Reception</a></li>
                     <li><a href="recommendations.html">Recommendations</a></li>
@@ -58,7 +62,7 @@
         <!--image cover-->
         <aside>
             <figure>
-                <img src="../images/lotr_return_of_the_king_cover.jpg" alt="Book cover of Return of the King">
+                <img src="../img/lotr_return_of_the_king_cover.jpg" alt="Book cover of Return of the King">
                 <figcaption> Fig. 1 - Cover Return of the King</figcaption>
             </figure>
         </aside>
