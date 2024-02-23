@@ -58,7 +58,6 @@ h2 {
     }
     #nav-links {
         display: none;
-        /*border: solid grey 2px;*/
         width: fit-content;
         padding: 4px;
     }
@@ -78,9 +77,6 @@ h2 {
     }
     #nav-links li {
         border-bottom: solid grey 2px;
-    }
-    #nav-links li:last-child {
-        /*border-bottom: none*/
     }
     table {
         width: 100%;
