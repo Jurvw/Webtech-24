@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="../css/summary.css"> 
-        <title>LOTR: The Return of The King, Summary</title>
+        <title>LOTR: The Return of the King, Summary</title>
         <meta charset="UTF-8">
         <meta name="keywords" content="Lord of The Rings, Return of The King, Book, Summary">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +10,16 @@
     </head>
     <body>
         <header>
-            <h1>    
-                Lord of the Rings: The Return of the King
+            <h1 onclick='window.open("index.html")'>
+                Lord of the Rings: <span id="title">The Return of the King</span>
             </h1>
             <nav>
-                <ul>
-                    <li><a href="author.html">Author</a></li>
-                    <li><a href="reception.html">Reception</a></li>
-                    <li><a href="recommendations.html">Recommendations</a></li>
-                    <li><a href="movie.html">Movie Adaptation</a></li>
-                    <li><a href="index.html">Return of The King</a></li>
-                    <li><a href="summary.html">Summary</a></li>
+                <label id="hamburger" for="dropdowncheckbox">
+                    <img src="../img/hamburger_menu.png" alt="hamburger-menu dropdown-button for navigation">
+                </label>
+                <input type="checkbox" id="dropdowncheckbox">
+                <ul id="nav-links">
+                    <li><a href="author.html">Author</a></li><li><a href="reception.html">Reception</a></li><li><a href="recommendations.html">Recommendations</a></li><li><a href="movie.html">Movie Adaptation</a></li><li><a href="index.html">Return of the King</a></li><li><a href="summary.html">Summary</a></li>
                 </ul>
             </nav>
             <h2>Summary</h2>

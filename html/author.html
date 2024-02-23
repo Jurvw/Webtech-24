@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>LOTR: The Return of The King, Author</title>
+        <title>LOTR: The Return of the King, Author</title>
         <link rel="stylesheet" href="../css/author.css"> 
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Lord of The Rings, Return of The King, Book, Author">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Author of Return of The King.">
     </head>
     <body>
         <header>
-            <h1>    
-                Lord of the Rings: The Return of the King
+            <h1 onclick="window.open('index.html')">
+                Lord of the Rings: <span id="title">The Return of the King</span>
             </h1>
             <nav>
-                <ul>
-                    <li><a href="author.html">Author</a></li>
-                    <li><a href="reception.html">Reception</a></li>
-                    <li><a href="recommendations.html">Recommendations</a></li>
-                    <li><a href="movie.html">Movie Adaptation</a></li>
-                    <li><a href="index.html">Return of The King</a></li>
-                    <li><a href="summary.html">Summary</a></li>
+                <label id="hamburger" for="dropdowncheckbox">
+                    <img src="../img/hamburger_menu.png" alt="hamburger-menu dropdown-button for navigation">
+                </label>
+                <input type="checkbox" id="dropdowncheckbox">
+                <ul id="nav-links">
+                    <li><a href="author.html">Author</a></li><li><a href="reception.html">Reception</a></li><li><a href="recommendations.html">Recommendations</a></li><li><a href="movie.html">Movie Adaptation</a></li><li><a href="index.html">Return of the King</a></li><li><a href="summary.html">Summary</a></li>
                 </ul>
             </nav>
             <h2>Author - J. R. R. Tolkien</h2>
         </header>
 
-        <img src="../images/J.R.R.Tolkien.jpg" alt="An Image of J.R.R. Tolkien during his later years." style="width:250px;height:356px;">
+        <img src="../img/J.R.R.Tolkien.jpg" alt="An Image of J.R.R. Tolkien during his later years." style="width:250px;height:356px;" class="center">
         <p></p>
 
         <h3>General</h3>
         <p>John Ronald Reuel Tolkien, more often referred to as J. R. R. Tolkien, was an English author and scholar who lived from 1892 up until 1973. Tolkien showed remarkable linguistic gifts and a great interest in languages starting from a young age. He had mastered both Latin and Greek, while also making up his own languages, which would later influence his work.</p>
         
         <h3>Literary work</h3>
-        <p>Tolkien used to tell his children stories and wrote them annual Christmas letters from Father Christmas for them. These stories would later be published for others to read. In 1937 the children story The Hobbit was published which became an immediate success. Following this success, Tolkien began on his most famous work: <a href="index.html">The Lord of the Rings</a>. He spent over then years writing the primary narrative and appendices for The Lord of the Rings. The Lord of the Rings consists of three volumes and, just like The Hobbit, its story takes place in <a href="recommendations.html">Middle-Earth</a>.</p>
+        <p>Tolkien used to tell his children stories and wrote them annual Christmas letters from Father Christmas for them. These stories would later be published for others to read. In 1937 the children story The Hobbit was published which became an immediate success. Following this success, Tolkien began on his most famous work: <a href="index.html">The Lord of the Rings</a>. He spent over then years writing the primary narrative and appendices for The Lord of the Rings. The Lord of the Rings consists of three volumes and, just like The Hobbit, its story takes place in <a id="Middle-Earth" href="recommendations.html">Middle-Earth</a>.</p>
     </body>
 </html>

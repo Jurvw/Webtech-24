@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="../css/reccomendations.css">
     <head>
-        <title>Recommendations</title>
+        <title>LOTR: The Return of the King, Recommendations</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/recommendations.css">
+        <meta name="keywords" content="Lord of The Rings, Return of The King, Book, Recommendations">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Recommendations for Return of The King.">
     </head>
     <body>
         <header>
-            <h1>    
-                Lord of the Rings: The Return of the King
+            <h1 onclick="window.open('index.html')">
+                Lord of the Rings: <span id="title">The Return of the King</span>
             </h1>
             <nav>
-                <ul>
-                    <li><a href="author.html">Author</a></li>
-                    <li><a href="reception.html">Reception</a></li>
-                    <li><a href="recommendations.html">Recommendations</a></li>
-                    <li><a href="movie.html">Movie Adaptation</a></li>
-                    <li><a href="index.html">Return of The King</a></li>
-                    <li><a href="summary.html">Summary</a></li>
+                <label id="hamburger" for="dropdowncheckbox">
+                    <img src="../img/hamburger_menu.png" alt="hamburger-menu dropdown-button for navigation">
+                </label>
+                <input type="checkbox" id="dropdowncheckbox">
+                <ul id="nav-links">
+                    <li><a href="author.html">Author</a></li><li><a href="reception.html">Reception</a></li><li><a href="recommendations.html">Recommendations</a></li><li><a href="movie.html">Movie Adaptation</a></li><li><a href="index.html">Return of the King</a></li><li><a href="summary.html">Summary</a></li>
                 </ul>
             </nav>
             <h2>Recommendations</h2>
         </header>
 
         <p>The Return of the King is a story that takes place within the fictional place called Middle-Earth. Through this it is connected to other books.</p>
-        <h3>Works that take place in Middle-earth:</h3>
+        <h3 id="Middle-Earth">Works that take place in Middle-earth:</h3>
         <table>
             <tr>
                 <th>Date of Publication</th>

@@ -1,9 +1,55 @@
+#nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    background-image: url("../img/wooden-floor-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body header {
+    background-color: none;
+}
+nav {
+    background-color: #242424;
+    margin: 0;
+}
+#dropdowncheckbox {
+    display: none;
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url("../img/Minas_Tirith.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 20px 30px;
+    text-shadow: 0 0 4px #fff
+}
+p {
+    margin: 10px;
+    text-indent: 30px;
+}
+#nav-links a {
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: red;
+}
+h2 {
+    font-size: 2.5em;
+    margin: 10px 20px;
+}
+
 @media only screen and (max-width: 600px) {
-    body {
-        margin: 0;
-    }
     h1 {
         width: 100vw - 1.34em;
+        text-align: center;
+    }
+    h2 {
         text-align: center;
     }
     #title {
@@ -12,6 +58,9 @@
     }
     #nav-links {
         display: none;
+        /*border: solid grey 2px;*/
+        width: fit-content;
+        padding: 4px;
     }
     #hamburger img {
         width: 30px;
@@ -21,20 +70,41 @@
     #dropdowncheckbox:checked ~ #nav-links {
         display: block;
     }
-}
-@media only screen and (min-width: 601px) {
-    #hamburger img {
-        display: none;
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    #nav-links li {
+        border-bottom: solid grey 2px;
+    }
+    #nav-links li:last-child {
+        /*border-bottom: none*/
+    }
+    table {
+        width: 100%;
     }
 }
-
-nav {
-    background-color: blue;
-    min-height: 39px;
-}
-#dropdowncheckbox {
-    display: none;
-}
-nav ul {
-    list-style-type: none;
+@media only screen and (min-width: 601px) {
+    #hamburger {
+        display: none;
+    }
+    #nav-links li {
+        display: inline-block;
+        border: none;
+        height: 40px;
+        width: auto;
+        text-align: center;
+        line-height: 40px;
+        border-right: white 2px solid;
+        padding: 4px 10px;
+    }
+    h1 {
+        font-size:4em;
+    }
+    #nav-links li:first-child {
+        margin-left: 10px;
+        border-left: white 2px solid;
+    }
 }
