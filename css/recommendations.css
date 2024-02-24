@@ -1,9 +1,44 @@
 @import url(general-layout.css);
+table {
+    background-color: #e7e7e7b0;
+    border-collapse: collapse;
+}
 table, th, td {
     border: 1px solid;
+    border-color: black;
 }
 th, td {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     height: 20px;
+}
+
+#tableMiddleEarth th {
+    background-color: #b67a0a;
+    color: white;
+}
+#tableSimilar th {
+    background-color: #b6570a;
+    color: white;
+}
+
+#notableWorks {
+    /*background-color: #e7e7e7;*/
+    width: fit-content;
+    padding-left: 30px;
+    margin-left: 10px;
+    border: 1px solid;
+    border-color: black;
+    background-color: #ffffff60;
+}
+#notableWorks li {
+    padding: 5px;
+}
+
+@media only screen and (min-width: 601px) {
+    table {
+        margin-left: 10px;
+    }
+    #tableSimilar {
+        margin-bottom: 10px;
+    }
 }
