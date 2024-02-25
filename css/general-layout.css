@@ -24,11 +24,13 @@ h1 {
     background-image: url("../img/Minas_Tirith.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: black;
     margin: 0;
     padding: 20px 30px;
     text-shadow: 0 0 4px #fff
 }
 p {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
     text-indent: 30px;
 }
@@ -40,8 +42,12 @@ a {
     color: red;
 }
 h2 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5em;
     margin: 10px 20px;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -50,6 +56,7 @@ h2 {
         text-align: center;
     }
     h2 {
+        width: 75vw -1.34em;
         text-align: center;
     }
     #title {
