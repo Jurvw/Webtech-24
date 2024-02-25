@@ -1,1 +1,10 @@
 @import url(general-layout.css);
+#spoilersummary {
+    position: absolute;
+    top: 100vh;
+    height: 100vh;
+}
+body {
+    background-size: auto;
+    background-position-x: -300px;
+}

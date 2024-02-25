@@ -7,10 +7,14 @@ body {
     margin: 0;
     background-image: url("../img/wooden-floor-background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    background-position-x: -300px;
 }
 body header {
     background-color: none;
+}
+header {
+    text-align: center;
 }
 nav {
     background-color: #242424;
@@ -44,7 +48,7 @@ h2 {
     margin: 10px 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     h1 {
         width: 100vw - 1.34em;
         text-align: center;
@@ -82,7 +86,7 @@ h2 {
         width: 100%;
     }
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 701px) {
     #hamburger {
         display: none;
     }
