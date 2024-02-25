@@ -107,7 +107,6 @@ h2 {
         font-size:4em;
     }
     #nav-links li:first-child {
-        margin-left: 10px;
         border-left: white 2px solid;
     }
 }
