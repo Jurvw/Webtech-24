@@ -10,9 +10,6 @@ body {
     background-size: auto;
     background-position-x: -300px;
 }
-body header {
-    background-color: none;
-}
 header {
     text-align: center;
 }
