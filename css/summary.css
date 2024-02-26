@@ -1,6 +1,6 @@
 @import url(general-layout.css);
 #spoilersummary {
-    position: absolute;
+    position: relative;
     top: 100vh;
     height: 100vh;
 }

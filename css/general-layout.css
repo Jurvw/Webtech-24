@@ -53,14 +53,15 @@ h2 {
 h3{
     font-family: Arial, Helvetica, sans-serif;
 }
+h1 a {
+    color: black;
+}
 
 @media only screen and (max-width: 700px) {
     h1 {
-        width: 100vw - 1.34em;
         text-align: center;
     }
     h2 {
-        width: 75vw -1.34em;
         text-align: center;
     }
     #title {

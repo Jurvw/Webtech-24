@@ -1,13 +1,7 @@
 @import url(general-layout.css);
 
-.quote {
-    text-indent: 0px;
-}
 body {
     text-align: center;
-}
-article {
-    margin-left: 10px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -28,6 +22,15 @@ article {
     }
     aside {
         order: 3;
+    }
+    h2 {
+        margin: 0;
+    }
+    #quotereview {
+        margin: 0;
+    }
+    .quote p {
+        text-indent: 0;
     }
 }
 @media only screen and (min-width: 701px) {
@@ -63,5 +66,8 @@ article {
     #quotereview {
         width: calc(73vw - 50px);
         height: 420px;
+    }
+    article {
+        margin-left: 10px;
     }
 }
