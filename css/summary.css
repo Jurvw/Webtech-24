@@ -1,11 +1,10 @@
 @import url(general-layout.css);
 #spoilersummary {
     position: relative;
-    top: 100vh;
+    top: max(100vh,auto);
     height: 100vh;
 }
 article {
-    margin: 20px;
     font-size: 1.5em;
 }
 #disclaimer {
