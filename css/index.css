@@ -37,7 +37,7 @@ body {
     aside {
         float: right;
         margin-right: 10px;
-        width: calc(27vw - 50px);
+        width: 27vw;
     }
     #book-cover {
         margin: 0;
@@ -51,6 +51,7 @@ body {
     }
     .quote {
         font-size: 2em;
+        width: 73vw;
     }
     .quote__credit {
         font-size: 1.5rem;
@@ -59,13 +60,7 @@ body {
         font-size: 1.25em;
     }
     h2 {
-        width: calc(73vw - 50px);
-        margin-left: 10px;
-        margin-right: 0;
-    }
-    #quotereview {
-        width: calc(73vw - 50px);
-        height: 420px;
+        width: 73vw;
     }
     article {
         margin-left: 10px;

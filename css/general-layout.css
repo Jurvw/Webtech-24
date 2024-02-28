@@ -1,4 +1,4 @@
-#nav-links {
+.nav__links {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -17,7 +17,7 @@ nav {
     background-color: #242424;
     margin: 0;
 }
-#dropdowncheckbox {
+.dropdowncheckbox {
     display: none;
 }
 h1 {
@@ -35,7 +35,7 @@ p {
     margin: 10px;
     text-indent: 30px;
 }
-#nav-links a {
+.nav__links a {
     color: white;
 }
 a {
@@ -62,21 +62,21 @@ h1 a {
     h2 {
         text-align: center;
     }
-    #title {
+    .h1__second-half {
         display: block;
         margin: 0.67em;
     }
-    #nav-links {
+    .nav__links {
         display: none;
         width: fit-content;
         padding: 4px;
     }
-    #hamburger img {
+    .hamburger img {
         width: 30px;
         height: 30px;
         margin: 6px;
     }
-    #dropdowncheckbox:checked ~ #nav-links {
+    .dropdowncheckbox:checked ~ .nav__links {
         display: block;
     }
     .center {
@@ -85,7 +85,7 @@ h1 a {
         margin-right: auto;
         width: 90%;
     }
-    #nav-links li {
+    .nav__links li {
         border-bottom: solid grey 2px;
     }
     table {
@@ -96,10 +96,10 @@ h1 a {
     }
 }
 @media only screen and (min-width: 701px) {
-    #hamburger {
+    .hamburger {
         display: none;
     }
-    #nav-links li {
+    .nav__links li {
         display: inline-block;
         border: none;
         height: 40px;
@@ -112,7 +112,7 @@ h1 a {
     h1 {
         font-size:4em;
     }
-    #nav-links li:first-child {
+    .nav__links li:first-child {
         border-left: white 2px solid;
     }
 }
