@@ -7,7 +7,7 @@
 article {
     font-size: 1.5em;
 }
-#disclaimer {
+#spoilerfreesummary__disclaimer {
     margin-bottom: 25px;
     font-size: 1.25rem;
 }
@@ -16,7 +16,4 @@ article {
     article {
         text-align: center;
     }
-}
-
-@media only screen and (min-width: 701px) {
 }
