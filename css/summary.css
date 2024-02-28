@@ -1,7 +1,7 @@
 @import url(general-layout.css);
 #spoilerSummary {
     position: relative;
-    top: max(100vh,auto);
+    top: 100vh;
     height: 100vh;
 }
 article {

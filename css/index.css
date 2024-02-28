@@ -15,7 +15,7 @@ body {
     .quote__credit {
         font-size: 1rem;
     }
-    #introduction {
+    #teaser {
         border-top: 5px black dotted;
         margin-top: 15px;
         font-size: 1.05em;
@@ -53,7 +53,7 @@ body {
     .quote__credit {
         font-size: 1.5rem;
     }
-    #introduction {
+    #teaser {
         font-size: 1.25em;
     }
     h2 {
