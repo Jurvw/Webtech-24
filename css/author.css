@@ -1,1 +1,7 @@
 @import url(general-layout.css);
+@media only screen and (min-width: 701px) {
+    img {
+        float: right;
+        margin-right: 10px;
+    }
+}
