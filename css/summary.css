@@ -1,5 +1,5 @@
 @import url(general-layout.css);
-#spoilersummary {
+#spoilerSummary {
     position: relative;
     top: max(100vh,auto);
     height: 100vh;
@@ -7,7 +7,7 @@
 article {
     font-size: 1.5em;
 }
-#spoilerfreesummary__disclaimer {
+#spoilerFreeSummary__disclaimer {
     margin-bottom: 25px;
     font-size: 1.25rem;
 }
