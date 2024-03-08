@@ -1,53 +1,217 @@
 function generateText() {
-    generateTest_p();
-}
+    var book;
+    var publisher;
+    var author;
 
-function generateTest_p() {
+    var newPar = document.createElement("img");
+    newPar.setAttribute("src", "../img/J.R.R.Tolkien.jpg");
+    const aside = document.getElementsByTagName("aside")[0];
+    aside.appendChild(newPar);
     const test = document.getElementById("test_p");
-
-    test.innerText = "Test";
-}
-
-class creativeWork {
-    constructor(authors, creationYear, title) {
-        this.authors = authors;
-        this.creationYear = creationYear;
-        this.title = title;
-    }
-
-}
-
-class book extends creativeWork {
     
-}
+    createInstances();
+    test.innerText = book.getTitle;
+    
 
-class author extends person {
-    constructor(name, yob, books, wikilink) {
-        super(name);
-        super(yob);
-        this.books = books;
-        this.wikiLink = wikilink;
+    function createInstances() {
+        const plot = '"The Lord of the Rings: The Return of the King" concludes J.R.R. Tolkien\'s epic fantasy trilogy with the final chapter of the War of the Ring. The story follows the efforts of the Fellowship as they strive to defeat the dark forces of Sauron and bring peace to Middle-earth. As the fate of the realm hangs in the balance, heroes emerge and sacrifices are made in a climactic battle between good and evil.';
+        book = new Book("J.R.R Tolkien", 1955, "Lord of the Rings: Return of the King", "Fantasy", "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/The_Return_of_the_King_cover.gif/220px-The_Return_of_the_King_cover.gif", plot);
+        
+        const publisherBookList = [
+            "The Lord of Rings: Return of the King",
+            "Pheasants Nest",
+            "All the Words We Know",
+            "Plot Twist",
+            "Southeast Asia",
+            "Thanks for Having Me",
+            "Ten Steps to Nanette",
+            "Menopause Brain",
+            "Strap Yourself In",
+            "Diggers of Kapyong"
+        ];
+        publisher = new Publisher("George Allen and Unwin", "https://en.wikipedia.org/wiki/Allen_%26_Unwin", publisherBookList);
+
+        const tolkienBooks= [
+            "Beowulf: The Monsters and the Critics",
+            "On Fairy-Stories",
+            "The Father Christmas Letters",
+            "Mr. Bliss",
+            "Roverandom",
+            "Leaf by Niggle",
+            "The Adventures of Tom Bombadil",
+            "Smith of Wootton Major",
+            "Farmer Giles of Ham",
+            "The Hobbit",
+            "The Lord of the Rings"];
+        author = new Author("J.R.R. Tolkien", 1892, tolkienBooks, "https://en.wikipedia.org/wiki/J._R._R._Tolkien");
     }
 }
 
-class person {
+class CreativeWork {
+    #authors;
+    #creationYear;
+    #title;
+
+    constructor(authors, creationYear, title) {
+        this.#authors = authors;
+        this.#creationYear = creationYear;
+        this.#title = title;
+    }
+
+    get getAuthors() {
+        return this.#authors;
+    }
+
+    set setAuthors(authors) {
+        this.#authors = authors;
+    }
+
+    get getCreationYear() {
+        return this.#creationYear;
+    }
+
+    set setCreationYear(cy) {
+        this.#creationYear = cy;
+    }
+    
+    get getTitle() {
+        return this.#title;
+    }
+
+    set setTitle(title) {
+        this.#title = title;
+    }
+}
+
+class Book extends CreativeWork {
+    #genre;
+    #cover;
+    #plot;
+
+    constructor(authors, creationYear, title, genre, cover, plot) {
+        super(authors, creationYear, title);
+        this.#genre = genre;
+        this.#cover = cover;
+        this.#plot = plot;
+    }
+
+    get getGenre() {
+        return this.#genre;
+    }
+
+    set setGenre(genre) {
+        this.#genre = genre;
+    }
+
+    get getCover() {
+        return this.#cover;
+    }
+    
+    set setCover(cover) {
+        this.#cover = cover;
+    }
+
+    get getPlot() {
+        return this.#plot;
+    }
+    
+    set setPlot(plot) {
+        this.#plot = plot;
+    }
+}
+
+class Person {
+    #name;
+    #yearOfBirth;
+
     constructor(name, yob) {
-        this.name = name;
-        this.yearOfBirth = yob;
+        this.#name = name;
+        this.#yearOfBirth = yob;
+    }
+
+    get getName() {
+        return this.#name;
+    }
+
+    set setName(name) {
+        this.#name = name;
+    }
+
+    get getYearOfBirth() {
+        return this.#yearOfBirth;
+    }
+
+    set setYearOfBirth(yob) {
+        this.#yearOfBirth = yob;
     }
 }
 
-class publisher extends company {
-    constructor(name, wikiPage, books) {
-        this.name = name;
-        this.wikiPage = wikiPage;
-        this.books = books;
+class Author extends Person {
+    #books;
+    #wikiLink;
+
+    constructor(name, yob, books, wikilink) {
+        super(name, yob);
+        this.#books = books;
+        this.#wikiLink = wikilink;
+    }
+
+    get getBooks() {
+        return this.#books;
+    }
+
+    set setBooks(books) {
+        this.#books = books;
+    }
+
+    get getWikiLink() {
+        return this.#wikiLink;
+    }
+    
+    set setWikiLink(wl) {
+        this.#wikiLink = wl;
     }
 }
 
-class company {
+class Company {
+    #name;
+    #wikiPage;
+
     constructor(name, wikiPage) {
-        this.name = name;
-        this.wikiPage = wikiPage;
+        this.#name = name;
+        this.#wikiPage = wikiPage;
+    }
+
+    get getName() {
+        return this.#name;
+    }
+
+    set setName(name) {
+        this.#name = name;
+    }
+
+    get getWikiPage() {
+        return this.#wikiPage;
+    }
+
+    set setWikiPage(wp) {
+        this.#wikiPage = wp;
+    }
+}
+
+class Publisher extends Company {
+    #books;
+
+    constructor(name, wikiPage, books) {
+        super(name, wikiPage);
+        this.#books = books;
+    }
+
+    get getBooks() {
+        return this.#books;
+    }
+
+    set setBooks(books) {
+        this.#books = books;
     }
 }
