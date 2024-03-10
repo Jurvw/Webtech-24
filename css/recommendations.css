@@ -12,11 +12,11 @@ th, td {
     height: 20px;
 }
 
-#tableMiddleEarth th {
+#tableMiddleEarth thead {
     background-color: #b67a0a;
     color: white;
 }
-#tableSimilar th {
+#tableSimilar thead {
     background-color: #b6570a;
     color: white;
 }
