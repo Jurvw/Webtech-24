@@ -12,16 +12,16 @@ th, td {
     height: 20px;
 }
 
-#earth thead {
+#middle-earth-works__table thead {
     background-color: #b67a0a;
     color: white;
 }
-#similar thead {
+#books-similar__table thead {
     background-color: #b6570a;
     color: white;
 }
 
-#works {
+#other-notable-works__list {
     width: fit-content;
     padding-left: 30px;
     margin-left: 10px;
@@ -29,7 +29,7 @@ th, td {
     border-color: black;
     background-color: #ffffff60;
 }
-#works li {
+#other-notable-works__list li {
     padding: 5px;
 }
 
@@ -37,7 +37,7 @@ th, td {
     table {
         margin-left: 10px;
     }
-    #similar {
+    #books-similar__table {
         margin-bottom: 10px;
     }
 }
