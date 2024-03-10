@@ -5,10 +5,7 @@
 }
 body {
     margin: 0;
-    background-image: url("../img/wooden-floor-background.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: -300px;
+    background-color: rgb(219, 196, 150);
 }
 header {
     text-align: center;
