@@ -13,6 +13,7 @@ function generateText() {
     test.innerText = book.getTitle;
 
     createBookElements(book);
+    createAuthorElements(author);
 
     function createBookElements(book) {
         //const article = document.getElementById("book-article");
@@ -54,6 +55,33 @@ function generateText() {
 
         //article.appendChild(title);
         //article.appendChild(coverImage);
+    }
+
+    function createAuthorElements(author) {
+        var p = document.getElementById("author-info");
+        var ul = document.getElementById("author-books");
+
+        const name = document.createTextNode("Author: " + author.getName);
+        const yob = document.createTextNode("Year of birth: " + author.getYearOfBirth);
+        const books = document.createTextNode("Books: ");
+
+        const wikilink = document.createElement("a");
+        wikilink.setAttribute("href", author.getWikiLink);
+        wikilink.innerText = ("Wikipedia page author");
+
+        p.appendChild(name);
+        p.appendChild(document.createElement("br"));
+        p.appendChild(yob);
+        p.appendChild(document.createElement("br"));
+        p.appendChild(wikilink);
+        p.appendChild(document.createElement("br"));
+        p.appendChild(books);
+        
+        for (var i = 0; i < author.getBooks.length; i++) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(author.getBooks[i]));
+            ul.appendChild(li);
+        }
     }
     
 
