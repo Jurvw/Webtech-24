@@ -17,7 +17,7 @@ nav {
     background-color: #242424;
     margin: 0;
 }
-#dropdownCheckbox {
+#dropdown__checkbox {
     display: none;
 }
 h1 {
@@ -69,7 +69,7 @@ h1 a {
         height: 30px;
         margin: 6px;
     }
-    #dropdownCheckbox:checked ~ .nav__links {
+    #dropdown__checkbox:checked ~ .nav__links {
         display: block;
     }
     .center {
