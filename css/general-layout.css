@@ -5,10 +5,7 @@
 }
 body {
     margin: 0;
-    background-image: url("../img/wooden-floor-background.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position-x: -300px;
+    background-color: rgb(219, 196, 150);
 }
 header {
     text-align: center;
@@ -17,7 +14,7 @@ nav {
     background-color: #242424;
     margin: 0;
 }
-#dropdownCheckbox {
+#dropdown__checkbox {
     display: none;
 }
 h1 {
@@ -69,7 +66,7 @@ h1 a {
         height: 30px;
         margin: 6px;
     }
-    #dropdownCheckbox:checked ~ .nav__links {
+    #dropdown__checkbox:checked ~ .nav__links {
         display: block;
     }
     .center {
