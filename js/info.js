@@ -42,7 +42,7 @@ function generateText() {
 
         var formatPlot = "";
         var plotArray = book.getPlot;
-        for (var i = 0; i < 30; i++) {
+        for (var i = 0; i < 57; i++) {
             formatPlot += plotArray[i];
         }
         cells[4].innerText = "Plot: " + formatPlot + " ...";
