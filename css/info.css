@@ -8,6 +8,15 @@ p {
     text-align: center;
 }
 
-#author-books {
+/*#author-books {
     margin-left: 40vw;
+}*/
+
+aside {
+    width: 35vw;
+    float: right;
+}
+
+main {
+    width: 65vw;
 }

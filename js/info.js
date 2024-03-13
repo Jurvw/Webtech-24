@@ -2,15 +2,8 @@ function generateText() {
     var book;
     var publisher;
     var author;
-
-    var newPar = document.createElement("img");
-    //newPar.setAttribute("src", "../img/J.R.R.Tolkien.jpg");
-    const aside = document.getElementsByTagName("aside")[0];
-    aside.appendChild(newPar);
-    const test = document.getElementById("test_p");
     
     createInstances();
-    test.innerText = book.getTitle;
 
     createBookElements(book);
     createAuthorElements(author);
@@ -39,13 +32,21 @@ function generateText() {
         header.innerText = book.getTitle;
 
         const coverImage = document.createElement("img");
+        coverImage.setAttribute("title", "Cover of " + book.getTitle);
         coverImage.setAttribute("src", book.getCover);
         cells[0].appendChild(coverImage);
 
         cells[1].innerText = "Author(s): " + book.getAuthors[0];
         cells[2].innerText = "Year of creation: " + book.getCreationYear;
         cells[3].innerText = "Genre: " + book.getGenre;
-        cells[4].innerText = "Plot: " + book.getPlot;
+
+        var formatPlot = "";
+        var plotArray = book.getPlot;
+        for (var i = 0; i < 30; i++) {
+            formatPlot += plotArray[i];
+        }
+        cells[4].innerText = "Plot: " + formatPlot + " ...";
+        cells[4].setAttribute("title", book.getPlot);
 
         rows[0].appendChild(header);
         for (var i = 0; i < cells.length; i++) {
@@ -53,9 +54,6 @@ function generateText() {
         }
 
         for (var i = 0; i < rows.length; i++) {table.appendChild(rows[i])}
-
-        //article.appendChild(title);
-        //article.appendChild(coverImage);
     }
 
     function createAuthorElements(author) {
