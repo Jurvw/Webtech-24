@@ -14,6 +14,7 @@ function generateText() {
 
     createBookElements(book);
     createAuthorElements(author);
+    createPublisherElements(book, publisher);
 
     function createBookElements(book) {
         //const article = document.getElementById("book-article");
@@ -83,7 +84,28 @@ function generateText() {
             ul.appendChild(li);
         }
     }
-    
+
+    function createPublisherElements(book, publisher) {
+        var p = document.getElementById("publisher-info");
+
+        const name = publisher.getName;
+        const wikiPage = publisher.getWikiPage;
+        const books = publisher.getBooks;
+
+        var booksString = "";
+        for (var i = 0; i < books.length - 2; i++) {
+            booksString += books[i] + ", ";
+        }
+        booksString += books[books.length - 2] + " and " + books[books.length - 1];
+
+        p.innerText = book.getTitle + " is published by " + name + ". Works by this publisher are: " + booksString + ". For more information: ";
+        var publisherWikiLink = document.createElement("a");
+        publisherWikiLink.setAttribute("href", wikiPage);
+        publisherWikiLink.innerText = "Their Wikipedia page";
+        p.appendChild(publisherWikiLink);
+        const publisherWikiLinkDot = document.createTextNode(".");
+        p.appendChild(publisherWikiLinkDot);
+    }
 
     function createInstances() {
         const plot = '"The Lord of the Rings: The Return of the King" concludes J.R.R. Tolkien\'s epic fantasy trilogy with the final chapter of the War of the Ring. The story follows the efforts of the Fellowship as they strive to defeat the dark forces of Sauron and bring peace to Middle-earth. As the fate of the realm hangs in the balance, heroes emerge and sacrifices are made in a climactic battle between good and evil.';
