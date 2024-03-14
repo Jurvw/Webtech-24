@@ -32,8 +32,8 @@ function generateText() {
         header.innerText = book.getTitle;
 
         const coverImage = document.createElement("img");
-        coverImage.setAttribute("title", "Cover of " + book.getTitle);
-        coverImage.setAttribute("src", book.getCover);
+        coverImage.title = "Cover of " + book.getTitle;
+        coverImage.src = book.getCover;
         cells[0].appendChild(coverImage);
 
         cells[1].innerText = "Author(s): " + book.getAuthors[0];
@@ -46,7 +46,7 @@ function generateText() {
             formatPlot += plotArray[i];
         }
         cells[4].innerText = "Plot: " + formatPlot + " ...";
-        cells[4].setAttribute("title", book.getPlot);
+        cells[4].title = book.getPlot;
 
         rows[0].appendChild(header);
         for (var i = 0; i < cells.length; i++) {
@@ -105,13 +105,18 @@ function generateText() {
         }
         booksString += books[books.length - 2] + " and " + books[books.length - 1];
 
-        p.innerText = book.getTitle + " is published by " + name + ". Works by this publisher are: " + booksString + ". For more information: ";
+        p.innerText = book.getTitle + " is published by ";
+        var nameSpan = document.createElement("span");
+        nameSpan.innerText = name;
+        nameSpan.title = "Works by this publisher are: " + booksString;
+        p.appendChild(nameSpan);
+        const bridgeText = document.createTextNode(". For more information: ");
+        p.appendChild(bridgeText);
         var publisherWikiLink = document.createElement("a");
-        publisherWikiLink.setAttribute("href", wikiPage);
+        publisherWikiLink.href = wikiPage;
         publisherWikiLink.innerText = "Their Wikipedia page";
         p.appendChild(publisherWikiLink);
-        const publisherWikiLinkDot = document.createTextNode(".");
-        p.appendChild(publisherWikiLinkDot);
+        p.appendChild(document.createTextNode("."));
     }
 
     function createInstances() {
