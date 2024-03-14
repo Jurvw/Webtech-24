@@ -59,37 +59,34 @@ function generateText() {
     function createAuthorElements(author) {
         var authorAside = document.getElementById("author-aside");
         var p = document.getElementById("author-info");
-        var ul = document.getElementById("author-books");
 
         const authorImage = document.createElement("img");
         authorImage.setAttribute("src", "https://static.wikia.nocookie.net/tolkien-online/images/e/e5/J.R.R._Tolkien.jpg/revision/latest/scale-to-width-down/1000?cb=20170402191335&path-prefix=nl");
         authorImage.setAttribute("style", "width:250px;height:356px;");
+        authorImage.setAttribute("class", "center");
 
         authorAside.appendChild(authorImage);
 
-        const name = document.createTextNode("Author: " + author.getName);
-        const yob = document.createTextNode("Year of birth: " + author.getYearOfBirth);
-        const books = document.createTextNode("Books: ");
+        var title = "Year of birth: " + author.getYearOfBirth + "\n\n";
+        title += "Books written by J.R.R. Tolkien:\n";
+        for (var i = 0; i < author.getBooks.length; i++) {
+            title += author.getBooks[i]+"\n";
+        }
+        authorImage.title = title;
+
+        var name = document.createElement("span");
+        name.innerText = "Author: " + author.getName;
+        name.title = title;
 
         const wikilink = document.createElement("a");
         wikilink.setAttribute("href", author.getWikiLink);
         wikilink.innerText = ("Wikipedia page author");
 
         p.appendChild(name);
-        /*p.appendChild(document.createElement("br"));
-        p.appendChild(yob);*/
         p.appendChild(document.createElement("br"));
         p.appendChild(wikilink);
-
-        //p.appendChild(books);
-        /*for (var i = 0; i < author.getBooks.length; i++) {
-            var li = document.createElement("li");
-            li.appendChild(document.createTextNode(author.getBooks[i]));
-            ul.appendChild(li);
-        }*/
-        //var ulString = ;
+        
         authorAside.appendChild(p);
-        //authorImage.title = ul;
     }
 
     function createPublisherElements(book, publisher) {
