@@ -57,8 +57,15 @@ function generateText() {
     }
 
     function createAuthorElements(author) {
+        var authorAside = document.getElementById("author-aside");
         var p = document.getElementById("author-info");
         var ul = document.getElementById("author-books");
+
+        const authorImage = document.createElement("img");
+        authorImage.setAttribute("src", "https://static.wikia.nocookie.net/tolkien-online/images/e/e5/J.R.R._Tolkien.jpg/revision/latest/scale-to-width-down/1000?cb=20170402191335&path-prefix=nl");
+        authorImage.setAttribute("style", "width:250px;height:356px;");
+
+        authorAside.appendChild(authorImage);
 
         const name = document.createTextNode("Author: " + author.getName);
         const yob = document.createTextNode("Year of birth: " + author.getYearOfBirth);
@@ -69,18 +76,20 @@ function generateText() {
         wikilink.innerText = ("Wikipedia page author");
 
         p.appendChild(name);
-        p.appendChild(document.createElement("br"));
-        p.appendChild(yob);
+        /*p.appendChild(document.createElement("br"));
+        p.appendChild(yob);*/
         p.appendChild(document.createElement("br"));
         p.appendChild(wikilink);
-        p.appendChild(document.createElement("br"));
-        p.appendChild(books);
-        
-        for (var i = 0; i < author.getBooks.length; i++) {
+
+        //p.appendChild(books);
+        /*for (var i = 0; i < author.getBooks.length; i++) {
             var li = document.createElement("li");
             li.appendChild(document.createTextNode(author.getBooks[i]));
             ul.appendChild(li);
-        }
+        }*/
+        //var ulString = ;
+        authorAside.appendChild(p);
+        //authorImage.title = ul;
     }
 
     function createPublisherElements(book, publisher) {
