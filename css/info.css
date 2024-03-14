@@ -8,6 +8,21 @@ p {
     text-align: center;
 }
 
-#author-books {
+/*#author-books {
     margin-left: 40vw;
+}*/
+
+aside {
+    width: 35vw;
+    float: right;
+}
+
+main {
+    width: 65vw;
+}
+
+[title] {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    /*border-bottom: 1px dotted #000;*/
 }
