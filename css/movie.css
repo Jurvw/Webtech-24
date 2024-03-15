@@ -23,10 +23,10 @@ h3{
     .trailer{
         float: left;
         position: relative;
-         width: 50%;
-         height: 100%;
-         overflow: hidden;
-         padding-bottom: 28.125%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        padding-bottom: 28.125%;
     }
     footer{
         position: relative;
