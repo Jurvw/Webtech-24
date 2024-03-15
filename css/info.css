@@ -1,25 +1,33 @@
 @import url(general-layout.css);
+p {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+}
+
+#author-info, #publisher-info {
+    text-indent: 0px;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+aside {
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
 
 @media only screen and (min-width: 701px) {
-    table {
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-    }
-
-    #author-info {
-        text-indent: 0px;
+    main {
+        width: 60vw;
     }
 
     aside {
         width: 35vw;
         float: right;
-    }
-
-    main {
-        width: 65vw;
     }
 
     [title] {
