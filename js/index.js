@@ -1,51 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
+var imgSize = false;
+var coverVersion = false;
 
-    var selectElement = document.getElementById("select-element");
-    const body = document.body;
-    var children = body.children;
-    function buildSelect(){
-        var bodyOption = document.createElement('option');
-        bodyOption.value = bodyOption.innerHTML = body.tagName;
-        selectElement.appendChild(bodyOption);
-        for (var i = 0; i < children.length; i++) {
-            var child = children[i];
-            var newOption = document.createElement('option');
-            newOption.value = child.tagName;
-            newOption.innerHTML = child.tagName;
-            selectElement.appendChild(newOption);
+document.addEventListener('DOMContentLoaded', function() {
+    var zoomDiv = document.getElementById("book-cover");
+    var coverImage = document.getElementById("book-cover__image");
+
+    zoomDiv.addEventListener("click", zoomImg, false);
+
+    var scrollDiv = document.getElementsByTagName("aside")[0];
+    scrollDiv.addEventListener("click", scrollBookImg, false);
+
+    function scrollBookImg(event) {
+        if (coverVersion) {
+            coverImage.src = "../img/lotr_return_of_the_king_cover.jpg";
         }
+        else {
+            coverImage.src = "https://m.media-amazon.com/images/I/41KPaTTRxFL.jpg";
+        }
+        coverVersion = !coverVersion;
     }
-    buildSelect();
-    const button = document.getElementById('change-element');
-    button.addEventListener('click', function () {
-        const selectedIndex = selectElement.selectedIndex;
-        const selectChange = document.getElementById('select-change');
-        const selectChangeIndex = selectChange.selectedIndex;
-        switch (selectChangeIndex) {
-            case 0:
-                if (selectedIndex > 0) {
-                    children[selectedIndex-1].style.color = "blue";
-                }else{
-                    body.style.color = "blue";
-                }
-                break;
-            case 1:
-                if (selectedIndex > 0) {
-                    children[selectedIndex-1].style.backgroundColor = "red";
-                }else{
-                    body.style.backgroundColor = "red";
-                }
-                break;
-            case 2:
-                if (selectedIndex > 0) {
-                    children[selectedIndex-1].style.fontSize = "2.0em";
-                }else{
-                    body.style.fontSize = "2.0em";
-                }
-                break;
-            default:
-                break;
+
+    function zoomImg(event) {
+        if (imgSize) {
+            event.target.width /= 2;
+            event.target.height /= 2;
         }
+        else {
+            event.target.width *= 2;
+            event.target.height *= 2;
+        }
+
+        imgSize = !imgSize;
         
-    });
+        event.stopPropagation();
+    }
 });
