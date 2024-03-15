@@ -96,25 +96,39 @@ function generateText() {
     }
 
     function createPublisherElements(book, publisher) {
+        //gets the paragraph which will be edited
         var p = document.getElementById("publisher-info");
 
+        //get the values in convenient const
         const name = publisher.getName;
         const wikiPage = publisher.getWikiPage;
         const books = publisher.getBooks;
 
+        //create a string to parse the list of books in an easily readable sentence
         var booksString = "";
         for (var i = 0; i < books.length - 2; i++) {
             booksString += books[i] + ", " + "\n";
         }
         booksString += books[books.length - 2] + " and " + books[books.length - 1];
 
+        //set the first part of the paragraph
         p.innerText = book.getTitle + " is published by ";
+
+        //create a span to add a title later
         var nameSpan = document.createElement("span");
         nameSpan.innerText = name;
+
+        //add a title for more information about the publisher
         nameSpan.title = "Works by this publisher are: " + "\n" + booksString;
+
+        //add the span to the paragraph
         p.appendChild(nameSpan);
+
+        //add the text in between the wiki-link and the span
         const bridgeText = document.createTextNode(". For more information: ");
         p.appendChild(bridgeText);
+
+        //add the wiki-link to the paragraph
         var publisherWikiLink = document.createElement("a");
         publisherWikiLink.href = wikiPage;
         publisherWikiLink.innerText = "Their Wikipedia page";
