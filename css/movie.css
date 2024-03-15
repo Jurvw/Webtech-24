@@ -29,11 +29,11 @@ h3{
          padding-bottom: 28.125%;
     }
     footer{
+        position: relative;
         border: 12px;
         position: bottom;
         bottom: 0;
-        height: 12px;
-    
+        height: 5px;
     }
     .trailer__video{
         position: absolute;
