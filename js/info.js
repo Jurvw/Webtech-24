@@ -40,13 +40,14 @@ function generateText() {
         cells[2].innerText = "Year of creation: " + book.getCreationYear;
         cells[3].innerText = "Genre: " + book.getGenre;
 
-        var formatPlot = "";
-        var plotArray = book.getPlot;
-        for (var i = 0; i < 57; i++) {
-            formatPlot += plotArray[i];
-        }
-        cells[4].innerText = "Plot: " + formatPlot + " ...";
-        cells[4].title = book.getPlot;
+        //var formatPlot = "";
+        //var plotArray = book.getPlot;
+        //for (var i = 0; i < 57; i++) {
+        //    formatPlot += plotArray[i];
+        //}
+        //cells[4].innerText = "Plot: " + formatPlot + " ...";
+        //cells[4].title = book.getPlot;
+        cells[4].innerText = "Plot: " + book.getPlot;
 
         rows[0].appendChild(header);
         for (var i = 0; i < cells.length; i++) {
@@ -98,14 +99,14 @@ function generateText() {
 
         var booksString = "";
         for (var i = 0; i < books.length - 2; i++) {
-            booksString += books[i] + ", ";
+            booksString += books[i] + ", " + "\n";
         }
         booksString += books[books.length - 2] + " and " + books[books.length - 1];
 
         p.innerText = book.getTitle + " is published by ";
         var nameSpan = document.createElement("span");
         nameSpan.innerText = name;
-        nameSpan.title = "Works by this publisher are: " + booksString;
+        nameSpan.title = "Works by this publisher are: " + "\n" + booksString;
         p.appendChild(nameSpan);
         const bridgeText = document.createTextNode(". For more information: ");
         p.appendChild(bridgeText);
@@ -118,7 +119,7 @@ function generateText() {
 
     function createInstances() {
         const plot = '"The Lord of the Rings: The Return of the King" concludes J.R.R. Tolkien\'s epic fantasy trilogy with the final chapter of the War of the Ring. The story follows the efforts of the Fellowship as they strive to defeat the dark forces of Sauron and bring peace to Middle-earth. As the fate of the realm hangs in the balance, heroes emerge and sacrifices are made in a climactic battle between good and evil.';
-        book = new Book(["J.R.R Tolkien"], 1955, "Lord of the Rings: Return of the King", "Fantasy", "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/The_Return_of_the_King_cover.gif/220px-The_Return_of_the_King_cover.gif", plot);
+        book = new Book(["J.R.R Tolkien"], 1955, "Lord of the Rings: The Return of the King", "Fantasy", "https://upload.wikimedia.org/wikipedia/en/thumb/1/11/The_Return_of_the_King_cover.gif/220px-The_Return_of_the_King_cover.gif", plot);
         
         const publisherBookList = [
             "The Lord of Rings: Return of the King",
