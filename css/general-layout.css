@@ -1,11 +1,17 @@
-.nav__links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 body {
+    position: relative;
     margin: 0;
+    min-height: 100vh;
     background-color: rgb(219, 196, 150);
+}
+footer {
+    margin: 5px;
+    border: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+
 }
 header {
     text-align: center;
@@ -13,6 +19,18 @@ header {
 nav {
     background-color: #242424;
     margin: 0;
+    text-align: left;
+}
+.nav__links {
+    display: none;
+    width: fit-content;
+    padding: 4px;
+}
+.nav__links li {
+    border-bottom: solid grey 2px;
+}
+.nav__links a {
+    color: white;
 }
 #dropdown__checkbox {
     display: none;
@@ -27,17 +45,12 @@ h1 {
     padding: 20px 30px;
     text-shadow: 0 0 4px #fff
 }
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-    text-indent: 30px;
+h1 a {
+    color: black;
 }
-.nav__links a {
-    color: white;
-}
-a {
-    text-decoration: none;
-    color: red;
+.h1__second-half {
+    display: block;
+    margin: 0.67em;
 }
 h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -47,47 +60,46 @@ h2 {
 h3{
     font-family: Arial, Helvetica, sans-serif;
 }
-h1 a {
-    color: black;
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    text-indent: 30px;
+}
+a {
+    text-decoration: none;
+    color: red;
+}
+.hamburger img {
+    width: 30px;
+    height: 30px;
+    margin: 6px;
+}
+#dropdown__checkbox:checked ~ .nav__links {
+    display: block;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+table {
+    width: 100%;
 }
 
-@media only screen and (max-width: 700px) {
-    .h1__second-half {
-        display: block;
-        margin: 0.67em;
-    }
-    .nav__links {
-        display: none;
-        width: fit-content;
-        padding: 4px;
-    }
-    .hamburger img {
-        width: 30px;
-        height: 30px;
-        margin: 6px;
-    }
-    #dropdown__checkbox:checked ~ .nav__links {
-        display: block;
-    }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-    }
-    .nav__links li {
-        border-bottom: solid grey 2px;
-    }
-    table {
-        width: 100%;
-    }
-    nav {
-        text-align: left;
-    }
-}
 @media only screen and (min-width: 701px) {
     .hamburger {
         display: none;
+    }
+    nav {
+        text-align: center;
+    }
+    .nav__links {
+        display: inline-block;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
     .nav__links li {
         display: inline-block;
