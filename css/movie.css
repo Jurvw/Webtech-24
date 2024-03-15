@@ -24,11 +24,12 @@ h3{
         float: left;
         position: relative;
          width: 50%;
-         height: 0;
          padding-bottom: 28.125%;
     }
     footer{
         position: absolute;
+        bottom: 0;
+        height: 12px;
     
     }
     .trailer__video{
