@@ -32,8 +32,6 @@ h3{
         border: 12px;
         position: bottom;
         bottom: 0;
-        height: 12px;
-    
     }
     .trailer__video{
         position: absolute;
@@ -49,5 +47,9 @@ h3{
     }
     p{
         font-size: 1em;
+    }
+
+    section {
+        background-color: red;
     }
 }

@@ -1,60 +1,65 @@
 function generateText() {
+    //create variables in the right scope to access later
     var book;
     var publisher;
     var author;
     
+    //calls function to create instances of the classes book, author and publisher
     createInstances();
 
+    //creates html elements and thus visual representation from the created instance of the book class
     createBookElements(book);
+
+    //creates html elements and thus visual representation from the created instance of the author class
     createAuthorElements(author);
+
+    //creates html elements and thus visual representation from the created instance of the publisher class, needs the created instance of the book class for the title of the book
     createPublisherElements(book, publisher);
 
     function createBookElements(book) {
-        //const article = document.getElementById("book-article");
-        table = document.getElementById("book-info");
+        //gets the html element to edit the contents of
+        var article = document.getElementById("book-info");
 
-        //const title = document.createElement("h3");
-        //title.innerText = book.getTitle;
-
-        //const coverImage = document.createElement("img");
-        //coverImage.setAttribute("src", book.getCover);
-
-        //const infoSection = document.createElement("section");
-
-        var rows = [];
-        for (var i = 0; i < 6; i++) {rows[i] = document.createElement("tr")}
-
-        var cells = [];
-        for (var i = 0; i < 5; i++) {cells[i] = document.createElement("td")}
-
-        const header = document.createElement("th");
-
-        header.innerText = book.getTitle;
-
+        //create title
+        var h = document.createElement("h3");
+        h.innerText = book.getTitle;
+        
+        //create the image of the cover
         const coverImage = document.createElement("img");
         coverImage.title = "Cover of " + book.getTitle;
         coverImage.src = book.getCover;
-        cells[0].appendChild(coverImage);
 
-        cells[1].innerText = "Author(s): " + book.getAuthors[0];
-        cells[2].innerText = "Year of creation: " + book.getCreationYear;
-        cells[3].innerText = "Genre: " + book.getGenre;
+        //create the line about the author(s)
+        var p1 = document.createElement("p");
+        p1.innerText = "Author(s): " + book.getAuthors[0];
 
-        //var formatPlot = "";
-        //var plotArray = book.getPlot;
-        //for (var i = 0; i < 57; i++) {
-        //    formatPlot += plotArray[i];
-        //}
-        //cells[4].innerText = "Plot: " + formatPlot + " ...";
-        //cells[4].title = book.getPlot;
-        cells[4].innerText = "Plot: " + book.getPlot;
-
-        rows[0].appendChild(header);
-        for (var i = 0; i < cells.length; i++) {
-            rows[i + 1].appendChild(cells[i]);
+        //set the title of the Author name to some information
+        var title = "Year of birth: " + author.getYearOfBirth + "\n\n";
+        title += "Books written by J.R.R. Tolkien:\n";
+        for (var i = 0; i < author.getBooks.length; i++) {
+            title += author.getBooks[i]+"\n";
         }
+        p1.title = title;
 
-        for (var i = 0; i < rows.length; i++) {table.appendChild(rows[i])}
+        //create line about the year of creation
+        var p2 = document.createElement("p");
+        p2.innerText = "Year of creation: " + book.getCreationYear;
+
+        //create line about genre of the book
+        var p3 = document.createElement("p");
+        p3.innerText = "Genre: " + book.getGenre;
+
+        //creates lines about the plot
+        var p4 = document.createElement("p");
+        p4.innerText = "Plot: " + book.getPlot;
+
+        //appends all different parts of the information to the article
+        article.appendChild(h);
+        article.appendChild(coverImage);
+        article.appendChild(p1);
+        article.appendChild(p2);
+        article.appendChild(p3);
+        article.appendChild(p4);
     }
 
     function createAuthorElements(author) {
