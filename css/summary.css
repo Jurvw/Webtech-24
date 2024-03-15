@@ -1,9 +1,7 @@
 @import url(general-layout.css);
 
-#spoiler-summary {
-    position: relative;
-    top: 100vh;
-    height: 100vh;
+#spoiler-free-summary {
+    min-height: 100vh;
 }
 
 article {
@@ -14,7 +12,12 @@ article {
     margin-bottom: 25px;
     font-size: 1.25rem;
 }
+footer{
+    position: relative;
+    bottom: 0;
+   text-align: center;
 
+}
 article {
     text-align: center;
 }

@@ -23,6 +23,9 @@ body {
 aside {
     order: 3;
 }
+footer{
+    order: 4;
+}
 
 h2 {
     margin: 0;

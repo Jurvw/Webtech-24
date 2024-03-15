@@ -32,12 +32,6 @@ th, td {
 #other-notable-works__list li {
     padding: 5px;
 }
-
-
-footer {
-    order: 4;
-}
-
 @media only screen and (min-width: 701px) {
     table {
         margin-left: 10px;
