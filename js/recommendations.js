@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 1:
                 if (selectedIndex > 0) {
-                    children[selectedIndex-1].style.backgroundColor = "red";
+                    children[selectedIndex-1].style.backgroundColor = "purple";
                 }else{
-                    body.style.backgroundColor = "red";
+                    body.style.backgroundColor = "purple";
                 }
                 break;
             case 2:
