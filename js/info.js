@@ -63,16 +63,20 @@ function generateText() {
     }
 
     function createAuthorElements(author) {
+        //gets the html element to edit the contents of
         var authorAside = document.getElementById("author-aside");
         var p = document.getElementById("author-info");
 
+        //create the image of the author
         const authorImage = document.createElement("img");
         authorImage.setAttribute("src", "https://static.wikia.nocookie.net/tolkien-online/images/e/e5/J.R.R._Tolkien.jpg/revision/latest/scale-to-width-down/1000?cb=20170402191335&path-prefix=nl");
         authorImage.setAttribute("style", "width:250px;height:356px;");
         authorImage.setAttribute("class", "center");
 
+        //append the image of the author to the aside
         authorAside.appendChild(authorImage);
 
+        //create title
         var title = "Year of birth: " + author.getYearOfBirth + "\n\n";
         title += "Books written by J.R.R. Tolkien:\n";
         for (var i = 0; i < author.getBooks.length; i++) {
@@ -80,41 +84,59 @@ function generateText() {
         }
         authorImage.title = title;
 
+        //create line with name of author
         var name = document.createElement("span");
         name.innerText = "Author: " + author.getName;
         name.title = title;
 
+        //create line with wikipedia link
         const wikilink = document.createElement("a");
         wikilink.setAttribute("href", author.getWikiLink);
         wikilink.innerText = ("Wikipedia page author");
 
+        //append the name and wikipedia link to the paragraph
         p.appendChild(name);
         p.appendChild(document.createElement("br"));
         p.appendChild(wikilink);
         
+        //append the paragraph to the aside
         authorAside.appendChild(p);
     }
 
     function createPublisherElements(book, publisher) {
+        //gets the paragraph which will be edited
         var p = document.getElementById("publisher-info");
 
+        //get the values in convenient const
         const name = publisher.getName;
         const wikiPage = publisher.getWikiPage;
         const books = publisher.getBooks;
 
+        //create a string to parse the list of books in an easily readable sentence
         var booksString = "";
         for (var i = 0; i < books.length - 2; i++) {
             booksString += books[i] + ", " + "\n";
         }
         booksString += books[books.length - 2] + " and " + books[books.length - 1];
 
+        //set the first part of the paragraph
         p.innerText = book.getTitle + " is published by ";
+
+        //create a span to add a title later
         var nameSpan = document.createElement("span");
         nameSpan.innerText = name;
+
+        //add a title for more information about the publisher
         nameSpan.title = "Works by this publisher are: " + "\n" + booksString;
+
+        //add the span to the paragraph
         p.appendChild(nameSpan);
+
+        //add the text in between the wiki-link and the span
         const bridgeText = document.createTextNode(". For more information: ");
         p.appendChild(bridgeText);
+
+        //add the wiki-link to the paragraph
         var publisherWikiLink = document.createElement("a");
         publisherWikiLink.href = wikiPage;
         publisherWikiLink.innerText = "Their Wikipedia page";
