@@ -10,51 +10,43 @@ function generateText() {
     createPublisherElements(book, publisher);
 
     function createBookElements(book) {
-        //const article = document.getElementById("book-article");
-        table = document.getElementById("book-info");
+        var article = document.getElementById("book-info");
 
-        //const title = document.createElement("h3");
-        //title.innerText = book.getTitle;
-
-        //const coverImage = document.createElement("img");
-        //coverImage.setAttribute("src", book.getCover);
-
-        //const infoSection = document.createElement("section");
-
-        var rows = [];
-        for (var i = 0; i < 6; i++) {rows[i] = document.createElement("tr")}
-
-        var cells = [];
-        for (var i = 0; i < 5; i++) {cells[i] = document.createElement("td")}
-
-        const header = document.createElement("th");
-
-        header.innerText = book.getTitle;
-
+        var h = document.createElement("h3");
+        h.innerText = book.getTitle;
+        
         const coverImage = document.createElement("img");
         coverImage.title = "Cover of " + book.getTitle;
         coverImage.src = book.getCover;
-        cells[0].appendChild(coverImage);
 
-        cells[1].innerText = "Author(s): " + book.getAuthors[0];
-        cells[2].innerText = "Year of creation: " + book.getCreationYear;
-        cells[3].innerText = "Genre: " + book.getGenre;
+        var p1 = document.createElement("p");
+        p1.innerText = "Author(s): " + book.getAuthors[0];
 
-        //var formatPlot = "";
-        //var plotArray = book.getPlot;
-        //for (var i = 0; i < 57; i++) {
-        //    formatPlot += plotArray[i];
-        //}
-        //cells[4].innerText = "Plot: " + formatPlot + " ...";
-        //cells[4].title = book.getPlot;
-        cells[4].innerText = "Plot: " + book.getPlot;
-
-        rows[0].appendChild(header);
-        for (var i = 0; i < cells.length; i++) {
-            rows[i + 1].appendChild(cells[i]);
+        var title = "Year of birth: " + author.getYearOfBirth + "\n\n";
+        title += "Books written by J.R.R. Tolkien:\n";
+        for (var i = 0; i < author.getBooks.length; i++) {
+            title += author.getBooks[i]+"\n";
         }
 
-        for (var i = 0; i < rows.length; i++) {table.appendChild(rows[i])}
+        p1.title = title;
+
+        var p2 = document.createElement("p");
+        p2.innerText = "Year of creation: " + book.getCreationYear;
+
+        var p3 = document.createElement("p");
+        p3.innerText = "Genre: " + book.getGenre;
+
+        var p4 = document.createElement("p");
+        p4.innerText = "Plot: " + book.getPlot;
+
+
+
+        article.appendChild(h);
+        article.appendChild(coverImage);
+        article.appendChild(p1);
+        article.appendChild(p2);
+        article.appendChild(p3);
+        article.appendChild(p4);
     }
 
     function createAuthorElements(author) {
