@@ -1,46 +1,59 @@
 function generateText() {
+    //create variables in the right scope to access later
     var book;
     var publisher;
     var author;
     
+    //calls function to create instances of the classes book, author and publisher
     createInstances();
 
+    //creates html elements and thus visual representation from the created instance of the book class
     createBookElements(book);
+
+    //creates html elements and thus visual representation from the created instance of the author class
     createAuthorElements(author);
+
+    //creates html elements and thus visual representation from the created instance of the publisher class, needs the created instance of the book class for the title of the book
     createPublisherElements(book, publisher);
 
     function createBookElements(book) {
+        //gets the html element to edit the contents of
         var article = document.getElementById("book-info");
 
+        //create title
         var h = document.createElement("h3");
         h.innerText = book.getTitle;
         
+        //create the image of the cover
         const coverImage = document.createElement("img");
         coverImage.title = "Cover of " + book.getTitle;
         coverImage.src = book.getCover;
 
+        //create the line about the author(s)
         var p1 = document.createElement("p");
         p1.innerText = "Author(s): " + book.getAuthors[0];
 
+        //set the title of the Author name to some information
         var title = "Year of birth: " + author.getYearOfBirth + "\n\n";
         title += "Books written by J.R.R. Tolkien:\n";
         for (var i = 0; i < author.getBooks.length; i++) {
             title += author.getBooks[i]+"\n";
         }
-
         p1.title = title;
 
+        //create line about the year of creation
         var p2 = document.createElement("p");
         p2.innerText = "Year of creation: " + book.getCreationYear;
 
+        //create line about genre of the book
         var p3 = document.createElement("p");
         p3.innerText = "Genre: " + book.getGenre;
 
+        //creates lines about the plot
         var p4 = document.createElement("p");
         p4.innerText = "Plot: " + book.getPlot;
 
-
-
+        //appends all different parts of the information to the article
         article.appendChild(h);
         article.appendChild(coverImage);
         article.appendChild(p1);

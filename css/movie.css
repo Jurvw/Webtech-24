@@ -27,10 +27,8 @@ h3{
          padding-bottom: 28.125%;
     }
     footer{
-        position: absolute;
+        position: relative;
         bottom: 0;
-        height: 12px;
-    
     }
     .trailer__video{
         position: absolute;
@@ -45,5 +43,9 @@ h3{
     }
     p{
         font-size: 1em;
+    }
+
+    section {
+        background-color: red;
     }
 }
