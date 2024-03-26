@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Library: Login page</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Library, Login, register">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Login page of our library.">
+        
+        <link rel="stylesheet" href="../css/login.css">
+        <script src="../js/login.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.html" target="_self">Lord of the Rings: <span class="h1__second-half">The Return of the King</span></a>
+            </h1>
+            <nav>
+                <label class="hamburger" for="dropdown__checkbox">
+                    <img src="../img/hamburger_menu.png" alt="hamburger-menu dropdown-button for navigation">
+                </label>
+                <input type="checkbox" id="dropdown__checkbox">
+                <ul class="nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="summary.html">Summary</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="reception.html">Reception</a></li>
+                    <li><a href="movie.html">Movie Adaptation</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password">
+
+        <button onclick="submitCredentials()">Confirm</button>
+
+    </body>
+</html>
