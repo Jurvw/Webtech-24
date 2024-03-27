@@ -1,8 +1,40 @@
 @import url(general-layout.css);
 .book-blocks {
-    width: 300px;
-    height: 400px;
+    width: 15vw;
+    height: 50vh;
     float: left;
+}
+
+#books {
+    margin: 50px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+section {
+    margin: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    background-color: white;
+    float: left;
+    padding: 8px 16px;
+    border: 1px solid black;
+    margin: 0 4px;
 }
 
 @media only screen and (min-width: 701px) {

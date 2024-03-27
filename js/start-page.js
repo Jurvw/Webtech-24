@@ -14,7 +14,7 @@ function generateBooks() {
             var x = document.getElementsByClassName("book-blocks")[i];
 
             var img = document.createElement("img");
-            img.src = "";
+            img.src = "https://upload.wikimedia.org/wikipedia/commons/d/d4/J._R._R._Tolkien%2C_ca._1925.jpg";
 
             x.appendChild(img);
             x.appendChild(document.createElement("p"));
