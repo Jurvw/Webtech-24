@@ -1,0 +1,10 @@
+@import url(general-layout.css);
+.book-blocks {
+    width: 300px;
+    height: 400px;
+    float: left;
+}
+
+@media only screen and (min-width: 701px) {
+
+}
